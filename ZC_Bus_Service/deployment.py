@@ -1,5 +1,4 @@
 import os
-from symbol import parameters
 from .settings import *
 from .settings import BASE_DIR
 
