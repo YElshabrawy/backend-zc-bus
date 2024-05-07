@@ -31,8 +31,8 @@ jobs:
               run: pip install -r requirements.txt
 
             # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
-            # - name: DB Migrate
-            #   run: python manage.py migrate
+            - name: DB Migrate
+              run: python manage.py migrate
 
             - name: Collect static files
               run: python manage.py collectstatic
