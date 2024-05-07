@@ -97,7 +97,7 @@ WSGI_APPLICATION = 'ZC_Bus_Service.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env('DATABASE_NAME'),
+        'NAME': env('DATABASE_NAME', default=''),
         'USER': env('DATABASE_USER'),
         'PASSWORD': env('DATABASE_PASSWORD'),
         'HOST': env('DATABASE_HOST'),
