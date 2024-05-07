@@ -11,6 +11,8 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ZC_Bus_Service.settings')
+settings_module = "ZC_Bus_Service.deployment" if 'WEBSITE_HOSTNAME' in os.environ else "ZC_Bus_Service.settings"
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', settings_module)
 
 application = get_wsgi_application()
